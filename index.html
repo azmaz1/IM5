@@ -1,13 +1,174 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8">
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titel</title>
-  </head>
-  <body>
+    <title>Gitarrenbauer Webseite</title>
 
-        <h1>hola mundo</h1>
+    <!-- Link to Google Fonts stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
 
-  </body>
+    <!-- Your existing stylesheets and scripts go here -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+
+    <!-- Include Glide.js library -->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
+
+</head>
+
+<body>
+
+
+ <!-- Hero Section -->
+ <section id="hero" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+      <h1 id="typed-title" class="hero-title"></h1>
+      <p class="hero-subtitle">Erstelle deine eigene Custom Gitarre.</p>
+      <a href="#guitarForm" class="cta-button">Jetzt loslegen</a>
+  </div>
+</section>
+
+<script>
+    // Typed.js initialization
+    var options = {
+        strings: ["Willkommen bei Reh Guitars", "Entdecke unser Handwerk", "Erstelle deinen Traum"],
+        typeSpeed: 60, // Typing speed in milliseconds
+        backSpeed: 40, // Backspacing speed in milliseconds
+        loop: true, // Loop the animation
+    };
+
+    var typed = new Typed("#typed-title", options);
+</script>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="about-content">
+        <h2>Über uns</h2>
+        <p>
+            Reh Guitars aus Luzern steht für handgefertigte Gitarren mit Leidenschaft und Hingabe.
+            Jedes Instrument wird individuell aus hochwertigen Materialien gefertigt, vereint traditionelles
+            Handwerk mit innovativem Design und beeindruckt nicht nur klanglich, sondern auch durch die Ästhetik.
+        </p>
+    </div>
+    <div class="about-image">
+        <img src="/img/about.jpg" alt="About Us Image">
+    </div>
+</section>
+
+<!-- Unsere Arbeiten Section HTML -->
+<section id="unsere-arbeiten" class="unsere-arbeiten">
+    
+    <div class="unsere-arbeiten-slider glide">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="/img/Arbeiten/image-2.jpg" alt="Work 1"></li>
+                <li class="glide__slide"><img src="/img/Arbeiten/image-3.jpg" alt="Work 2"></li>
+                <li class="glide__slide"><img src="/img/Arbeiten/image-4.jpg" alt="Work 3"></li>
+                <li class="glide__slide"><img src="/img/Arbeiten/image-5.jpg" alt="Work 4"></li>
+                <li class="glide__slide"><img src="/img/Arbeiten/image-6.jpg" alt="Work 5"></li>
+                <!-- Add more slides as needed -->
+            </ul>
+            </div>    
+        </div>
+    </div>
+    <div class="unsere-arbeiten-content">
+        <h2>Unsere Arbeiten</h2>
+        <p>
+            Vom Formen des Holzes bis zur individuellen Lackierung wird jeder Schritt des Prozesses
+            von erfahrenen Händen überwacht. Das Ergebnis sind einzigartige Gitarren,
+            die nicht nur durch ihren Klang, sondern auch durch ihre handgefertigte Qualität beeindrucken.
+        </p>
+    </div>
+</section>
+
+
+
+<!-- Guitar Generator Section -->
+
+
+    <h1>Guitar Customizer</h1>
+    <div class="container">
+        <form id="guitarForm" class="flex-container">
+            <!-- Body Color Selection -->
+            <div class="dropdown">
+                <label for="bodyColor">Body Color:</label>
+                <select id="bodyColor">
+                    <option value="rot">Rot</option>
+                    <option value="blau">Blau</option>
+                    <option value="weiss">Weiss</option>
+                    <option value="schwarz">Schwarz</option>
+                    <option value="gelb">Gelb</option>
+                    <option value="violett">Violett</option>
+                </select>
+            </div>
+
+            <!-- Neck Material Selection -->
+            <div class="dropdown">
+                <label for="neckMaterial">Neck Material:</label>
+                <select id="neckMaterial">
+                    <option value="ahorn">Ahorn</option>
+                    <option value="ebenholz">Ebenholz</option>
+                </select>
+            </div>
+
+            <!-- Hardware Color Selection -->
+            <div class="dropdown">
+                <label for="hardwareColor">Hardware Color:</label>
+                <select id="hardwareColor">
+                    <option value="silber">Silber</option>
+                    <option value="gold">Gold</option>
+                </select>
+            </div>
+
+            <!-- Pickguard Color Selection -->
+            <div class="dropdown">
+                <label for="pickguardColor">Pickguard Color:</label>
+                <select id="pickguardColor">
+                    <option value="schwarz">Schwarz</option>
+                    <option value="cream">Cream</option>
+                    <option value="mint">Mint</option>
+                </select>
+            </div>
+        </form>
+
+        <!-- Guitar Preview Images -->
+        <div id="guitarPreview">
+            <img src="/img/default.png" alt="Guitar Preview" id="bodyColorImage">
+            <img src="/img/default.png" alt="Guitar Preview" id="neckMaterialImage">
+            <img src="/img/default.png" alt="Guitar Preview" id="hardwareColorImage">
+            <img src="/img/default.png" alt="Guitar Preview" id="pickguardColorImage">
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    
+
+    <section id="contact" class="contact">
+        <h2>Kontakt</h2>
+        <div class="contact-info">
+            <p>Email: <span id="email">rehguitars@beispiel.ch</span></p>
+            <p>Telefon: <span id="phone">+123 45 67 89</span></p>
+            <p>Adresse: <span id="address">123 Hauptstrasse Luzern</span></p>
+        </div>
+    </section>
+
+<!-- JavaScript Initialization Script for Unsere Arbeiten with Glide.js -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Glide('.glide', {
+            type: 'carousel',
+            autoplay: 2000, // Set to the desired autoplay interval in milliseconds
+        }).mount();
+    });
+</script>
+
+</body>
+
 </html>
