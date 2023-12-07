@@ -1,0 +1,9 @@
+README IM 5
+
+Bei meiner Website unterstützte mich Chat GPT sehr gut, 95% meiner Webseite sind damit entstanden. Bei "kleineren" Dingen im
+CSS File schrieb ich den Code selbst.
+
+Die Herausforderung an meiner Webseite war, den Guitar Customizer zum laufen zu bringen da der Code von Chat GPT tatsächlich
+nicht immer so einwandfrei funktioniert. Nachdem ich eine einfachere Version hatte, bei der es für jede Gitarren-Komination
+ein fertiges PNG gab, wollte ich noch eine bessere Version erstellen, bei der es pro Dropdown ein PNG über die anderen setzt,
+um so das ganze einfacher ausbauen zu können (ohne 50 neue PNGs zu erstellen).
